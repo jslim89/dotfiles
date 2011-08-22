@@ -21,7 +21,7 @@ way is to create a fresh new user account to try it out.
 
 ### CentOS Installation:
 
-**(NOTE: You must login as root)**
+#### (NOTE: You must login as root)
 1. su -
 2. yum install git
 3. yum install rubygems ctags
