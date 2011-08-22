@@ -38,6 +38,9 @@ nmap <leader>g <C-T>
 " command-t
 nmap <Leader>d :CommandT<CR>
 
+autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+
 " highlight those characters that are over the length of 80 chars 
 " http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929 
