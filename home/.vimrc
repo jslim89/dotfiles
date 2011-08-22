@@ -37,3 +37,8 @@ nmap <leader>g <C-T>
 
 " command-t
 nmap <Leader>d :CommandT<CR>
+
+" highlight those characters that are over the length of 80 chars 
+" http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns 
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929 
+match OverLength /\%81v.\+/ 

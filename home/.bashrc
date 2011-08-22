@@ -25,3 +25,5 @@ if [ $(id -u) -eq 0 ]; then
 else
     PS1="${PROMPT}$ "
 fi
+
+export EDITOR=vim

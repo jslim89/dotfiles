@@ -7,3 +7,6 @@ alias ls='ls --color --group-directories-first -p';
 alias ll='ls -lh --color';
 alias lsa='ls -a';
 alias lla='ls -alh';
+alias lf='ls -l | grep "^d"';
+alias lfa='ls -la | grep "^d"';
+alias lfo='ls -la | grep "^-"';
