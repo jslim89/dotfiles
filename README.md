@@ -32,3 +32,12 @@ way is to create a fresh new user account to try it out.
 6. /usr/bin/homesick symlink dotfiles
 7. cd ~/.homesick/repos/dotfiles
 8. git submodule update --init --recursive
+
+Changes that you need to make
+-----------------------------
+### c.vim plugin
+1. cd ~/.vim/bundle/c.vim/plugin
+2. vi c.vim
+3. search for the keyword C\_LocalTemplateFile \(Under 'Linux/Unix' portion')
+4. replace '/.vim/c-support/templates/Templates' with '/.vim/bundle/c.vim/c-support/templates/Templates'
+5. On the following line, look for C\_CodeSnippets, replace '/.vim/c-support/codesnippets/' with '/.vim/bundle/c.vim/c-support/codesnippets/'
