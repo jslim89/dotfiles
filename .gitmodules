@@ -22,3 +22,6 @@
 [submodule "home/.vim/bundle/closetag.vim"]
 	path = home/.vim/bundle/closetag.vim
 	url = https://github.com/docunext/closetag.vim.git
+[submodule "home/.vim/bundle/vim-less"]
+	path = home/.vim/bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
