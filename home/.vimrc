@@ -14,6 +14,7 @@ set number
 " status
 set ruler
 set laststatus=2
+set showcmd
 
 " search
 set incsearch 
@@ -37,6 +38,9 @@ nmap <leader>g <C-T>
 
 " command-t
 nmap <Leader>d :CommandT<CR>
+
+" List out all buffers
+nnoremap <leader>l :ls<CR>:b<space>
 
 " HTML or XML or etc. opening tag and closing tag matching
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
