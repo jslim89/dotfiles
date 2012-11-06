@@ -53,3 +53,13 @@ autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bu
 " http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929 
 match OverLength /\%81v.\+/ 
+
+" Disable arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
