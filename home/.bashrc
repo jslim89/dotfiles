@@ -1,3 +1,13 @@
+# for tmux: export 256color
+# @see https://wiki.archlinux.org/index.php/Tmux#Setting_the_correct_term
+# [ -n "$TMUX" ] && export TERM=screen-256color
+
+# Start tmux on every shell login. Add this before aliases declaration
+# http://bionicraptor.co/2011/07/24/how-to-automatically-launch-tmux/
+# if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
+#     tmux attach || tmux new; exit
+# fi
+
 # Load all the aliases or functions when you starts bash. 
 # To see all aliases, type alias. 
 # To see all functions, type declare -f. 
@@ -28,3 +38,28 @@ else
 fi
 
 export EDITOR=vim
+
+# less config
+# 
+# source code highlighting
+# $ apt-get install source-highlight
+# see http://linux-tips.org/article/78/syntax-highlighting-in-less
+export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+
+# -rR option is tell less to interpret those color codes and escape sequences
+# see http://unix.stackexchange.com/questions/19317/can-less-retain-colored-output
+export LESS="-iMSx4 -rRFX"
+
+# mysql prompt setting
+export MYSQL_PS1="\u@\h [\d]> "
+export PAGER=less
+
+# repeat a command n times
+repeat() {
+    n=$1
+    shift
+    while [ $(( n -= 1 )) -ge 0 ]
+    do
+        "$@"
+    done
+}

@@ -10,12 +10,10 @@
 [submodule "home/.vim/bundle/conque-shell"]
 	path = home/.vim/bundle/conque-shell
 	url = https://github.com/vim-scripts/Conque-Shell.git
+    ignore = dirty
 [submodule "home/.vim/bundle/taglist"]
 	path = home/.vim/bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
-[submodule "home/.vim/bundle/closetag"]
-	path = home/.vim/bundle/closetag
-	url = git://github.com/docunext/closetag.vim.git
 [submodule "home/.vim/bundle/c.vim"]
 	path = home/.vim/bundle/c.vim
 	url = https://github.com/vim-scripts/c.vim.git
@@ -25,3 +23,34 @@
 [submodule "home/.vim/bundle/vim-less"]
 	path = home/.vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
+    ignore = dirty
+[submodule "home/.vim/bundle/powerline"]
+	path = home/.vim/bundle/powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "home/.vim/bundle/vim-indent-guides"]
+	path = home/.vim/bundle/vim-indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "home/.vim/bundle/markdown"]
+	path = home/.vim/bundle/markdown
+	url = https://github.com/tpope/vim-markdown.git
+[submodule "home/.vim/bundle/tagbar"]
+	path = home/.vim/bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git
+[submodule "home/.vim/bundle/syntastic"]
+	path = home/.vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "home/.vim/bundle/ack"]
+	path = home/.vim/bundle/ack
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "home/.vim/bundle/vim-snipmate"]
+	path = home/.vim/bundle/vim-snipmate
+	url = git://github.com/garbas/vim-snipmate.git
+[submodule "home/.vim/bundle/tlib_vim"]
+	path = home/.vim/bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "home/.vim/bundle/vim-addon-mw-utils"]
+	path = home/.vim/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "home/.vim/bundle/snipmate-snippets"]
+	path = home/.vim/bundle/snipmate-snippets
+	url = https://github.com/honza/snipmate-snippets.git

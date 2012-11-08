@@ -1,13 +1,14 @@
-about
+About
 -----
 A collection of configuration files for the typical console programs bash, vim,
-screen, and misc.
+screen, tmux, and misc. 
 Folked from [kenmin] (https://github.com/kenmin)
 
-use it
-------
+Install
+-------
 Please **BACKUP** your existing dot files before you clone the repo. The safest
-way is to create a fresh new user account to try it out. 
+way is to create a fresh new user account to try it out. By default it should
+works in Ubuntu 12.04 Precise Pangolin.
 
 ### Ubuntu Installation:
 
@@ -33,3 +34,16 @@ way is to create a fresh new user account to try it out.
 7. cd ~/.homesick/repos/dotfiles
 8. git submodule update --init --recursive
 
+Fonts
+-----
+The vim-powerline needs Ubuntu Mono font
+
+* mkdir ~/.fonts 
+* cd ~/.fonts/ 
+* git clone https://github.com/scotu/ubuntu-mono-powerline.git 
+* cd ~
+
+**NOTE:** By default is disabled, edit the ~/.vimrc to uncomment this section
+```viml
+set guifont=Ubuntu\ Mono\ 12
+```
