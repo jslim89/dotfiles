@@ -13,7 +13,7 @@ works in Ubuntu 12.04 Precise Pangolin.
 ### Ubuntu Installation:
 
 1. sudo apt-get install git **(NOTE: If you have not install git)**
-2. sudo apt-get install rubygems exuberant-ctags
+2. sudo apt-get install rubygems exuberant-ctags ack-grep
 3. sudo gem install homesick
 4. /var/lib/gems/1.8/bin/homesick clone git://github.com/jslim89/dotfiles.git
 5. /var/lib/gems/1.8/bin/homesick symlink dotfiles
@@ -24,7 +24,7 @@ works in Ubuntu 12.04 Precise Pangolin.
 
 #### (NOTE: You must login as root)
 1. su -
-2. yum install git
+2. yum install git ack
 3. yum install rubygems ctags
 4. gem install homesick
    * IF you want to setup for root user, continue;

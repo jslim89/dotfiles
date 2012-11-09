@@ -54,3 +54,6 @@
 [submodule "home/.vim/bundle/snipmate-snippets"]
 	path = home/.vim/bundle/snipmate-snippets
 	url = https://github.com/honza/snipmate-snippets.git
+[submodule "home/.vim/bundle/vim-twig"]
+	path = home/.vim/bundle/vim-twig
+	url = git://github.com/beyondwords/vim-twig.git
