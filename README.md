@@ -37,11 +37,11 @@ works in Ubuntu 12.04 Precise Pangolin.
 Fonts
 -----
 The vim-powerline needs Ubuntu Mono font
-
-* mkdir ~/.fonts 
-* cd ~/.fonts/ 
-* git clone https://github.com/scotu/ubuntu-mono-powerline.git 
-* cd ~
+```sh
+$ mkdir ~/.fonts 
+$ cd ~/.fonts/ && git clone https://github.com/scotu/ubuntu-mono-powerline.git 
+$ cd ~
+```
 
 **NOTE:** By default is disabled, edit the ~/.vimrc to uncomment this section
 ```viml
