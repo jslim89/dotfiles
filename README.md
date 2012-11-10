@@ -11,31 +11,31 @@ way is to create a fresh new user account to try it out. By default it should
 works in Ubuntu 12.04 Precise Pangolin.
 
 ### Ubuntu Installation:
-
-1. sudo apt-get install git **(NOTE: If you have not install git)**
-2. sudo apt-get install rubygems exuberant-ctags ack-grep
-3. sudo gem install homesick
-4. /var/lib/gems/1.8/bin/homesick clone git://github.com/jslim89/dotfiles.git
-5. /var/lib/gems/1.8/bin/homesick symlink dotfiles
-6. cd ~/.homesick/repos/dotfiles
-7. git submodule update --init --recursive
+```sh
+$ sudo apt-get install git rubygems exuberant-ctags xclip mercurial vim tmux screen ack-grep
+$ sudo gem install homesick
+$ /var/lib/gems/1.8/bin/homesick clone git://github.com/jslim89/dotfiles.git
+$ /var/lib/gems/1.8/bin/homesick symlink dotfiles
+$ cd ~/.homesick/repos/dotfiles
+$ git submodule update --init --recursive
+```
 
 ### CentOS Installation:
 
 #### (NOTE: You must login as root)
-1. su -
-2. yum install git ack
-3. yum install rubygems ctags
-4. gem install homesick
-   * IF you want to setup for root user, continue;
-   * ELSE logout from root user
-5. /usr/bin/homesick clone git://github.com/jslim89/dotfiles.git
-6. /usr/bin/homesick symlink dotfiles
-7. cd ~/.homesick/repos/dotfiles
-8. git submodule update --init --recursive
+```sh
+$ su -
+$ yum install git ack rubygems ctags
+$ gem install homesick
+   # IF you want to setup for root user, continue;
+   # ELSE logout from root user
+$ /usr/bin/homesick clone git://github.com/jslim89/dotfiles.git
+$ /usr/bin/homesick symlink dotfiles
+$ cd ~/.homesick/repos/dotfiles
+$ git submodule update --init --recursive
+```
 
-Fonts
------
+## Fonts
 The vim-powerline needs Ubuntu Mono font
 ```sh
 $ mkdir ~/.fonts 
