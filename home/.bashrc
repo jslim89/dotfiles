@@ -54,6 +54,19 @@ export LESS="-iMSx4 -rRFX"
 export MYSQL_PS1="\u@\h [\d]> "
 export PAGER=less
 
+# Environment variable setting
+# If you're installed java, just uncomment it, change the path if necessary
+# export JAVA_HOME='/opt/jdk1.7.0_07/bin'
+# export PATH=$PATH:$JAVA_HOME
+
+# If you're installed eclipse, just uncomment it, change the path if necessary
+# export ECLIPSE_HOME='/opt/eclipse'
+# export PATH=$PATH:$ECLIPSE_HOME
+
+# If you're installed Ruby Gem, just uncomment it, change the path if necessary
+# export RUBY_GEM='/var/lib/gems/1.8/bin'
+# export PATH=$PATH:$RUBY_GEM
+
 # repeat a command n times
 repeat() {
     n=$1
