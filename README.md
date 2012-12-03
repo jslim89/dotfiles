@@ -35,6 +35,42 @@ $ cd ~/.homesick/repos/dotfiles
 $ git submodule update --init --recursive
 ```
 
+### Mac
+Install homebrew before install anything else.  
+_(NOTE: doesn't guarantee for all utilities mention in **Ubuntu**)_
+
+Change the content of `~/.homesick/repos/dotfiles/home/.bash.d/filedir.sh`
+```sh
+# Original
+alias ls='ls --color --group-directories-first -p';
+alias ll='ls -lh --color';
+
+# Change to
+alias ls='ls -G';
+alias ll='ls -lhG';
+```
+
+Originally MAC doesn't look for `~/.bashrc`, rather it recognize `~/.profile`. So there are 2 way to do that:
+
+Rename it
+```sh
+$ mv ~/.bashrc ~/.profile
+```
+Add the content below to `~/.profile`
+```sh
+$ echo "if [ -f ~/.bashrc ]; then . ~/.bashrc; fi" >> ~/.profile
+```
+
+_Reference:_
+* _[Where to find the .bashrc file on Mac OS X Snow Leopard and Lion?](http://superuser.com/questions/147043/where-to-find-the-bashrc-file-on-mac-os-x-snow-leopard-and-lion#answer-147699)_
+
+## Guideline
+If you want to add certain program to environment variable, just add to `~/bin`
+```sh
+$ cd ~/bin
+$ ln -s /path/to/your/program
+```
+
 ## Fonts
 The vim-powerline needs Ubuntu Mono font
 ```sh
