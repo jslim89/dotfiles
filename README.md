@@ -14,8 +14,8 @@ works in Ubuntu 12.04 Precise Pangolin.
 ```sh
 $ sudo apt-get install git rubygems exuberant-ctags xclip mercurial vim tmux screen ack-grep
 $ sudo gem install homesick
-$ /var/lib/gems/1.8/bin/homesick clone git://github.com/jslim89/dotfiles.git
-$ /var/lib/gems/1.8/bin/homesick symlink dotfiles
+$ `which homesick` clone git://github.com/jslim89/dotfiles.git
+$ `which homesick` symlink dotfiles
 $ cd ~/.homesick/repos/dotfiles
 $ git submodule update --init --recursive
 ```
@@ -29,8 +29,8 @@ $ yum install git ack rubygems ctags
 $ gem install homesick
    # IF you want to setup for root user, continue;
    # ELSE logout from root user
-$ /usr/bin/homesick clone git://github.com/jslim89/dotfiles.git
-$ /usr/bin/homesick symlink dotfiles
+$ `which homesick` clone git://github.com/jslim89/dotfiles.git
+$ `which homesick` symlink dotfiles
 $ cd ~/.homesick/repos/dotfiles
 $ git submodule update --init --recursive
 ```
