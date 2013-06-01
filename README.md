@@ -30,6 +30,7 @@ $ gem install homesick
    # IF you want to setup for root user, continue;
    # ELSE logout from root user
 $ `which homesick` clone git://github.com/jslim89/dotfiles.git
+$ mv ~/.homesick/repos/dotfiles.git ~/.homesick/repos/dotfiles
 $ `which homesick` symlink dotfiles
 $ cd ~/.homesick/repos/dotfiles
 $ git submodule update --init --recursive
