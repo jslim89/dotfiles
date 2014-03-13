@@ -57,3 +57,9 @@
 [submodule "home/.vim/bundle/vim-twig"]
 	path = home/.vim/bundle/vim-twig
 	url = git://github.com/beyondwords/vim-twig.git
+[submodule "home/.vim/bundle/vim-javascript"]
+	path = home/.vim/bundle/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
+[submodule "home/.vim/bundle/vim-jst"]
+	path = home/.vim/bundle/vim-jst
+	url = git@github.com:briancollins/vim-jst.git
