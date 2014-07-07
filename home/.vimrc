@@ -60,7 +60,7 @@ nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
 
 " HTML or XML or etc. opening tag and closing tag matching
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
-autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
 
 " highlight those characters that are over the length of 80 chars 
 " http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns 
