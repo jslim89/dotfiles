@@ -63,3 +63,4 @@ repeat() {
         "$@"
     done
 }
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi

@@ -4,10 +4,10 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # file listing
-alias ls='ls --color --group-directories-first -p';
-alias ll='ls -lh --color';
-alias lsa='ls -ah';
-alias lla='ls -alh';
-alias lf='ls -l | grep "^d"';
-alias lfa='ls -la | grep "^d"';
-alias lfo='ls -la | grep "^-"';
+alias ls='gls --color --group-directories-first -p';
+alias ll='gls -lh --color';
+alias lsa='gls -ah';
+alias lla='gls -alh';
+alias lf='gls -l | grep "^d"';
+alias lfa='gls -la | grep "^d"';
+alias lfo='gls -la | grep "^-"';
