@@ -27,18 +27,31 @@ Paste the command below to your terminal, and hit `<ENTER>`
 $ bash <(curl -s https://raw.githubusercontent.com/jslim89/dotfiles/osx/bin/build.sh)
 ```
 
-### CentOS Installation:
+### Debian
 
-#### (NOTE: You must login as root)
 ```sh
-$ su -
-$ yum install git ack rubygems ctags
+$ su - # login as root
+$ apt-get install git rubygems exuberant-ctags xclip mercurial vim tmux screen ack-grep
 $ gem install homesick
-   # IF you want to setup for root user, continue;
-   # ELSE logout from root user
-$ `which homesick` clone git://github.com/jslim89/dotfiles.git
+$ exit # logout from root
+$ `which homesick` clone https://github.com/jslim89/dotfiles.git
 $ `which homesick` symlink dotfiles
 $ cd ~/.homesick/repos/dotfiles
+$ git checkout ubuntu # temporary use ubuntu branch first
+$ git submodule update --init --recursive
+```
+
+### CentOS
+
+```sh
+$ su - # login as root
+$ yum install git ack rubygems ctags
+$ gem install homesick
+$ exit # exit from root user
+$ `which homesick` clone https://github.com/jslim89/dotfiles.git
+$ `which homesick` symlink dotfiles
+$ cd ~/.homesick/repos/dotfiles
+$ git checkout ubuntu # temporary use ubuntu branch first
 $ git submodule update --init --recursive
 ```
 
