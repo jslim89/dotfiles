@@ -10,6 +10,14 @@ git checkout ubuntu
 git submodule update --init --recursive
 cd ~
 
+# Create a symlink for .fonts
+echo "Symlink .fonts"
+if [ -d ~/.fonts ]; then
+    ln -s ~/.homesick/repos/dotfiles/home/.fonts/* ~/.fonts/
+else
+    ln -s ~/.homesick/repos/dotfiles/home/.fonts ~/
+fi
+
 # Git config
 echo "Updating Git config..."
 git config --global color.ui auto
