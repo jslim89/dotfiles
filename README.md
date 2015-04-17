@@ -12,5 +12,9 @@ way is to create a fresh new user account to try it out.
 Then paste the command below to your terminal and hit `<ENTER>`
 
 ```sh
+$ su - # login as root
+$ apt-get install curl git rubygems exuberant-ctags xclip mercurial vim tmux screen ack-grep
+$ gem install homesick
+$ exit # exit root user
 $ bash <(curl -s https://raw.githubusercontent.com/jslim89/dotfiles/debian/bin/build.sh)
 ```
