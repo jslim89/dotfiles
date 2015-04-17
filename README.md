@@ -13,6 +13,7 @@ Please **BACKUP** your existing dot files before you clone the repo. The safest 
 Paste the command below to your terminal, and hit `<ENTER>`
 
 ```sh
+$ sudo apt-get install curl
 $ bash <(curl -s https://raw.githubusercontent.com/jslim89/dotfiles/ubuntu/bin/build.sh)
 ```
 
