@@ -18,17 +18,6 @@ Then paste the command below to your terminal and hit `<ENTER>`
 
 ```sh
 $ bash <(curl -s https://raw.githubusercontent.com/jslim89/dotfiles/osx/bin/build.sh)
-$ brew install ctags-exuberant
-$ brew install coreutils
-$ sudo gem install homesick
-$ `which homesick` clone https://github.com/jslim89/dotfiles.git
-$ `which homesick` symlink dotfiles
-$ cd ~/.homesick/repos/dotfiles
-$ git submodule update --init --recursive
-
-# Originally MAC doesn't look for `~/.bashrc`, rather it recognize `~/.profile`. So there are 2 way to do that:
-# Rename to .profile
-$ mv ~/.bashrc ~/.profile
 ```
 
 ## Terminal profile
