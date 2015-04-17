@@ -16,8 +16,8 @@ sudo gem install homesick
 `which homesick` clone https://github.com/jslim89/dotfiles.git
 `which homesick` symlink dotfiles
 cd ~/.homesick/repos/dotfiles
-git submodule update --init --recursive
 git checkout osx
+git submodule update --init --recursive
 cd ~
 
 # Originally MAC doesn't look for `~/.bashrc`, rather it recognize `~/.profile`. So there are 2 way to do that:
