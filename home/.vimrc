@@ -21,7 +21,7 @@ let g:Powerline_symbols = 'fancy'
 
 " install the ubuntu mono font for vim-powerline
 " @see https://github.com/scotu/ubuntu-mono-powerline
-" set guifont=Ubuntu\ Mono\ 12
+set guifont=Ubuntu\ Mono\ 12
 
 " search
 set incsearch 
