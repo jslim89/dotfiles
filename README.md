@@ -28,6 +28,9 @@ $ git submodule update --init --recursive
 $ mv ~/.bashrc ~/.profile
 ```
 
+## Terminal profile
+Update the terminal to light yellow background, import from [terminal/js-profile.terminal](https://raw.githubusercontent.com/jslim89/dotfiles/osx/terminal/js-profile.terminal)
+
 ## Guideline
 If you want to add certain program to environment variable, just add to `~/bin`
 ```sh

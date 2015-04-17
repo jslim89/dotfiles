@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Git
+echo "Updating Git config..."
 git config --global color.ui auto
 git config --global color.branch auto
 git config --global color.diff auto
