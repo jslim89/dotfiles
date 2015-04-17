@@ -60,3 +60,6 @@
 [submodule "home/.vim/bundle/vim-blade"]
 	path = home/.vim/bundle/vim-blade
 	url = https://github.com/xsbeats/vim-blade.git
+[submodule "home/.fonts/ubuntu-mono-powerline"]
+	path = home/.fonts/ubuntu-mono-powerline
+	url = https://github.com/scotu/ubuntu-mono-powerline.git
