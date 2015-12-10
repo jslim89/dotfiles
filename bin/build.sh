@@ -4,10 +4,10 @@
 sudo apt-get install git exuberant-ctags xclip mercurial vim tmux screen ack-grep
 sudo gem install homesick
 `which homesick` clone https://github.com/jslim89/dotfiles.git
-`which homesick` symlink dotfiles
 cd ~/.homesick/repos/dotfiles
 git checkout ubuntu
 git submodule update --init --recursive
+`which homesick` symlink dotfiles
 cd ~
 
 # Create a symlink for .fonts
