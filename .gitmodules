@@ -60,3 +60,6 @@
 [submodule "home/.vim/bundle/vim-blade"]
 	path = home/.vim/bundle/vim-blade
 	url = https://github.com/xsbeats/vim-blade.git
+[submodule "home/.vim/bundle/vim-jsx"]
+	path = home/.vim/bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git

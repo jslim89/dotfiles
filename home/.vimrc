@@ -23,6 +23,13 @@ let g:Powerline_symbols = 'fancy'
 " @see https://github.com/scotu/ubuntu-mono-powerline
 " set guifont=Ubuntu\ Mono\ 12
 
+" status with required setttings for vim-jsx
+" @see https://github.com/mxw/vim-jsx
+" If you would like JSX in .js files, set it to 0
+let g:jsx_ext_required = 1
+" If you wish to restrict JSX to files with the pre-v0.12 @jsx React.DOM pragma, set to 1
+let g:jsx_pragma_required = 0
+
 " search
 set incsearch 
 set hlsearch
