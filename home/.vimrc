@@ -124,3 +124,6 @@ autocmd BufWritePost .vimrc source %
 " Short to lauch several conque term tabs
 nnoremap <leader>csb :ConqueTermTab bash<CR>
 nnoremap <leader>csm :ConqueTermTab mysql -u root -p<CR>
+
+" https://github.com/leafgarland/typescript-vim
+let g:typescript_indent_disable = 1

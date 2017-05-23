@@ -66,3 +66,6 @@
 [submodule "home/.vim/bundle/vim-pug"]
 	path = home/.vim/bundle/vim-pug
 	url = https://github.com/digitaltoad/vim-pug.git
+[submodule "home/.vim/bundle/typescript-vim"]
+	path = home/.vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
