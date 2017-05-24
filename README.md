@@ -7,7 +7,7 @@ Folked from [kenmin] (https://github.com/kenmin)
 Prerequisite
 ============
 
-- [Rubygems](https://rubygems.org/)
+- [Rubygems](https://rubygems.org/) (refer [the guide](https://gorails.com/setup/ubuntu/16.04))
 
 Install
 =======
