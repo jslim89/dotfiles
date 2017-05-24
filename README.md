@@ -11,6 +11,7 @@ Please **BACKUP** your existing dot files before you clone the repo. The safest 
 ### Ubuntu
 
 _Make sure you have [Rubygems](https://rubygems.org/) installed._
+([Refer the guide](https://gorails.com/setup/ubuntu/16.04))
 
 Paste the command below to your terminal, and hit `<ENTER>`
 
