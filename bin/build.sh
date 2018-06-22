@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # installation
-sudo apt-get install git exuberant-ctags xclip mercurial vim tmux screen ack-grep
+sudo apt-get install git exuberant-ctags xclip mercurial vim tmux screen ack-grep ruby
 sudo gem install homesick
 `which homesick` clone https://github.com/jslim89/dotfiles.git
 cd ~/.homesick/repos/dotfiles
