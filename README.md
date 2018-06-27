@@ -92,3 +92,11 @@ $ ln -s /path/to/your/program
 | `~         | Split a new window and run htop.         |
 | `r         | Reload your .tmux.conf config file.      |
 | Shift+PgUp | Show previous page.                      |
+
+To resize tmux pane, hit `\`` followed by `:resize-pane -L <size>`
+  
+- options `-L` for left, `-R` for right, `-U` for up, `-D` for down
+
+e.g. `:resize-pane -L 15`
+
+Ref [Resizing tmux panes](https://michaelsoolee.com/resize-tmux-panes/)
