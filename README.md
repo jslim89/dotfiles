@@ -65,3 +65,30 @@ If you want to add certain program to environment variable, just add to `~/bin`
 $ cd ~/bin
 $ ln -s /path/to/your/program
 ```
+
+## Usage
+
+### Vim's Key Bindings
+| Shortcuts | Description                              |
+|-----------|------------------------------------------|
+| ,         | Leader key                               |
+| jj        | Exist from insert mode into normal mode. |
+| ,p        | Toggle between Paste and normal mode.    |
+
+### Tmux's Key Bindings
+| Shortcuts  | Description                              |
+|------------|------------------------------------------|
+| `          | Prefix key (backtick)                    |
+| ``         | Type backtick in console.                |
+| Alt+j      | Switch to left tab.                      |
+| Alt+k      | Switch to right tab.                     |
+| `\         | Split window vertically.                 |
+| `-         | Split window horizontally.               |
+| `j         | Move up to top window.                   |
+| `k         | Move down to down window.                |
+| `h         | Move to left window.                     |
+| `l         | Move to right window.                    |
+| `/         | Split a new window and man page for cmd. |
+| `~         | Split a new window and run htop.         |
+| `r         | Reload your .tmux.conf config file.      |
+| Shift+PgUp | Show previous page.                      |
