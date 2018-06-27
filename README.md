@@ -93,7 +93,7 @@ $ ln -s /path/to/your/program
 | `r         | Reload your .tmux.conf config file.      |
 | Shift+PgUp | Show previous page.                      |
 
-To resize tmux pane, hit `\`` followed by `:resize-pane -L <size>`
+To resize tmux pane, hit \` followed by `:resize-pane -L <size>`
   
 - options `-L` for left, `-R` for right, `-U` for up, `-D` for down
 
