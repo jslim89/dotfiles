@@ -199,7 +199,7 @@ Plug 'ervandew/supertab'
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-scripts/taglist.vim'
 Plug 'jwalton512/vim-blade'
-Plug 'jpangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 Plug 'flazz/vim-colorschemes'
 
 " Add plugins to &runtimepath
