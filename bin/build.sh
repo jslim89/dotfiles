@@ -14,9 +14,9 @@ fi
 brew install ctags-exuberant coreutils
 sudo gem install homesick
 `which homesick` clone https://github.com/jslim89/dotfiles.git
-`which homesick` symlink dotfiles
 cd ~/.homesick/repos/dotfiles
-git checkout osx
+git checkout macOS
+`which homesick` symlink dotfiles
 git submodule update --init --recursive
 cd ~
 
