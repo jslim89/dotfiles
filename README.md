@@ -2,7 +2,7 @@ About
 -----
 A collection of configuration files for the typical console programs bash, vim,
 screen, tmux, and misc. 
-Folked from [kenmin] (https://github.com/kenmin)
+[Based on Kian Meng](https://github.com/kianmeng)
 
 Prerequisite
 ============
