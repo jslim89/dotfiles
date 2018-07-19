@@ -58,6 +58,15 @@ $ git checkout ubuntu # temporary use ubuntu branch first
 $ git submodule update --init --recursive
 ```
 
+### Windows
+
+I use this in [Git Bash](https://git-scm.com/download/win).
+
+```sh
+C:\Users\username> cd ~
+C:\Users\username> curl -O https://raw.githubusercontent.com/jslim89/dotfiles/windows/.vimrc
+```
+
 ## Guideline
 If you want to add certain program to environment variable, just add to `~/bin`
 
