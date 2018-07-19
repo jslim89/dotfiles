@@ -9,6 +9,5 @@
 # *.[oa]
 # REFERENCE: http://book.git-scm.com/4_ignoring_files.html
 
-home/.vim/eclim
 home/.vim/plugin
 home/.vim/.netrwhist
