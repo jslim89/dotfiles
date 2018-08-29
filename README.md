@@ -17,11 +17,11 @@ Install homebrew & git before install anything else.
 Then paste the command below to your terminal and hit `<ENTER>`
 
 ```sh
-$ bash <(curl -s https://raw.githubusercontent.com/jslim89/dotfiles/osx/bin/build.sh)
+$ bash <(curl -s https://raw.githubusercontent.com/jslim89/dotfiles/macOS/bin/build.sh)
 ```
 
 ## Terminal profile
-Update the terminal to light yellow background, import from [terminal/js-profile.terminal](https://raw.githubusercontent.com/jslim89/dotfiles/osx/terminal/js-profile.terminal)
+Update the terminal to light yellow background, import from [terminal/js-profile.terminal](https://raw.githubusercontent.com/jslim89/dotfiles/macOS/terminal/js-profile.terminal)
 
 ## Guideline
 If you want to add certain program to environment variable, just add to `~/bin`
