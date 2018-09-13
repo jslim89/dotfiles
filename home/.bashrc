@@ -67,3 +67,6 @@ repeat() {
         "$@"
     done
 }
+
+# git bash auto completion https://git-scm.com/book/en/v1/Git-Basics-Tips-and-Tricks#Auto-Completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion

@@ -11,7 +11,7 @@ if ! type git >/dev/null; then
     exit -1
 fi
 
-brew install ctags-exuberant coreutils
+brew install ctags-exuberant coreutils bash-completion
 sudo gem install homesick
 `which homesick` clone https://github.com/jslim89/dotfiles.git
 cd ~/.homesick/repos/dotfiles
@@ -30,4 +30,5 @@ git config --global color.ui auto
 git config --global color.branch auto
 git config --global color.diff auto
 git config --global color.status auto
+git config --global diff.tool 'vimdiff'
 git config --global alias.ll 'log --oneline --decorate --graph --all'
