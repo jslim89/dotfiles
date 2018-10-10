@@ -201,6 +201,7 @@ Plug 'vim-scripts/taglist.vim'
 Plug 'jwalton512/vim-blade'
 Plug 'pangloss/vim-javascript'
 Plug 'flazz/vim-colorschemes'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -226,6 +227,10 @@ let g:syntastic_svn_checkers        = ['language_check']
 " supertab settings
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabDefaultCompletionType = "context"
+
+" code prettier
+nmap <Leader>! <Plug>(Prettier)
+let g:prettier#autoformat = 0
 
 " Speed up auto-completion menu
 " @see http://stackoverflow.com/a/2460593/1935866
