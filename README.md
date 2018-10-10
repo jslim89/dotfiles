@@ -78,6 +78,7 @@ $ ln -s /path/to/your/program
 | ,         | Leader key                               |
 | jj        | Exist from insert mode into normal mode. |
 | ,p        | Toggle between Paste and normal mode.    |
+| ,!        | Prettify the source code js/css related. |
 
 ### Tmux's Key Bindings
 | Shortcuts  | Description                              |
