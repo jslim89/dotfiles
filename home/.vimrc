@@ -200,6 +200,8 @@ Plug 'vim-syntastic/syntastic'
 Plug 'vim-scripts/taglist.vim'
 Plug 'jwalton512/vim-blade'
 Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'posva/vim-vue'
 Plug 'flazz/vim-colorschemes'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
