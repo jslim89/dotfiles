@@ -25,12 +25,6 @@ set expandtab
 " Syntax & color scheme
 syntax on
 
-" Tell terminal your console support 256 colors. Set before colorscheme.
-set t_Co=256
-colorscheme default
-set background=light
-
-
 " status with required setttings for vim-powerline
 " @see https://github.com/Lokaltog/vim-powerline
 set ruler
@@ -204,9 +198,18 @@ Plug 'leafgarland/typescript-vim'
 Plug 'posva/vim-vue'
 Plug 'flazz/vim-colorschemes'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'junegunn/seoul256.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
+
+" Tell terminal your console support 256 colors. Set before colorscheme.
+set t_Co=256
+" colorscheme default
+" Color scheme https://github.com/junegunn/seoul256.vim
+let g:seoul256_background = 235
+colo seoul256
+set background=dark " other option: light
 
 " Syntastic settings
 set statusline+=%#warningmsg#
