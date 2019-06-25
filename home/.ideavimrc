@@ -22,3 +22,6 @@ nnoremap <leader>f :action FindInPath<CR>
 
 " Map <leader>-r to Rename a symbol 
 nnoremap <leader>r :action RenameElement<CR>
+
+" Map <leader>-i to Go to implementation
+nnoremap <leader>i :action GotoImplementation<CR>
