@@ -76,3 +76,5 @@ repeat() {
 }
 
 export PATH=$PATH:~/.composer/vendor/bin
+
+export LC_ALL=en_US.UTF-8

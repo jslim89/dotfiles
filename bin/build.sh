@@ -24,8 +24,12 @@ cd ~
 mv ~/.bashrc ~/.profile
 source ~/.profile
 
+# change back to dotfiles
+cd ~/.homesick/repos/dotfiles
+
 # Git config
 echo "Updating Git config..."
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o home/.bash.d/git-completion.sh
 git config --global color.ui auto
 git config --global color.branch auto
 git config --global color.diff auto
