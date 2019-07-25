@@ -11,7 +11,7 @@ if ! type git >/dev/null; then
     exit -1
 fi
 
-brew install ctags-exuberant coreutils bash-completion
+brew install ctags-exuberant coreutils bash-completion yarn
 sudo gem install homesick
 `which homesick` clone https://github.com/jslim89/dotfiles.git
 cd ~/.homesick/repos/dotfiles
