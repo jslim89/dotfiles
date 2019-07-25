@@ -75,6 +75,10 @@ repeat() {
         . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 }
 
-export PATH=$PATH:~/.composer/vendor/bin:~/.fzf/bin
+export PATH=$PATH:~/.composer/vendor/bin
+
+# init fzf
+# @see https://github.com/junegunn/fzf
+[ -f ~/.bash.d/fzf.bash ] && source ~/.bash.d/fzf.bash
 
 export LC_ALL=en_US.UTF-8
