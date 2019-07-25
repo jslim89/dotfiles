@@ -126,6 +126,10 @@ nmap <leader>n :NERDTreeToggle<CR>
 " command-t
 nmap <Leader>d :CommandT<CR>
 
+" fzf
+" @see https://github.com/junegunn/fzf.vim
+nmap <Leader>F :FZF<CR>
+
 " ctags
 " $ apt-get install exuberant-ctags
 "
@@ -199,6 +203,9 @@ Plug 'posva/vim-vue'
 Plug 'flazz/vim-colorschemes'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
