@@ -77,4 +77,8 @@ repeat() {
 
 export PATH=$PATH:~/.composer/vendor/bin
 
+# init fzf
+# @see https://github.com/junegunn/fzf
+[ -f ~/.bash.d/fzf.bash ] && source ~/.bash.d/fzf.bash
+
 export LC_ALL=en_US.UTF-8
