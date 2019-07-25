@@ -75,6 +75,6 @@ repeat() {
         . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 }
 
-export PATH=$PATH:~/.composer/vendor/bin
+export PATH=$PATH:~/.composer/vendor/bin:~/.fzf/bin
 
 export LC_ALL=en_US.UTF-8
