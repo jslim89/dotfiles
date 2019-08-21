@@ -201,6 +201,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'posva/vim-vue'
 Plug 'flazz/vim-colorschemes'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/limelight.vim'
