@@ -25,8 +25,8 @@ set expandtab
 " Syntax & color scheme
 syntax on
 
-" status with required setttings for vim-powerline
-" @see https://github.com/Lokaltog/vim-powerline
+" status with required setttings for lightline.vim
+" @see https://github.com/itchyny/lightline.vim
 set ruler
 set showcmd
 set nocompatible   " Disable vi-compatibility
@@ -34,7 +34,7 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 set number
 set showmode
-let g:Powerline_symbols = 'fancy'
+let g:lightline = { 'colorscheme': 'seoul256', }
 
 " prevent cursor stuck at top or bottom
 " @see https://news.ycombinator.com/item?id=9574469
@@ -192,7 +192,7 @@ Plug 'mileszs/ack.vim'
 Plug 'wincent/command-t'
 Plug 'tpope/vim-markdown'
 Plug 'scrooloose/nerdtree'
-Plug 'powerline/powerline'
+Plug 'itchyny/lightline.vim'
 Plug 'ervandew/supertab'
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-scripts/taglist.vim'
