@@ -6,6 +6,3 @@ setlocal tabstop=2
 " Auto indent after a {
 setlocal autoindent
 setlocal smartindent
-
-" Fix files with prettier, and then ESLint.
-let b:ale_fixers = ['prettier', 'eslint']

@@ -219,6 +219,3 @@ func! PhpUnComment() range
 endfunc
 
 " }}}
-
-" Fix files with prettier, and then ESLint.
-let b:ale_fixers = ['php_cs_fixer', 'trim_whitespace']
