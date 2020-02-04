@@ -1,13 +1,15 @@
 #!/bin/bash
 
 # installation
-sudo apt-get install git exuberant-ctags xclip mercurial vim tmux screen ack-grep ruby
-sudo gem install homesick
-`which homesick` clone https://github.com/jslim89/dotfiles.git
+sudo pacman -Sy ruby git xclip mercurial vim tmux screen which
+echo "PATH=\$PATH:$(ruby -e 'puts Gem.user_dir')/bin" >> ~/.bashrc
+. ~/.bashrc
+gem install homesick
+homesick clone https://github.com/jslim89/dotfiles.git
 cd ~/.homesick/repos/dotfiles
 git checkout ubuntu
 git submodule update --init --recursive
-`which homesick` symlink dotfiles
+homesick symlink dotfiles
 cd ~
 
 # Create a symlink for .fonts
