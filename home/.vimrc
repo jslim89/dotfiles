@@ -194,38 +194,83 @@ Plug 'mileszs/ack.vim'
 Plug 'wincent/command-t'
 Plug 'tpope/vim-markdown'
 Plug 'scrooloose/nerdtree'
-Plug 'powerline/powerline'
+Plug 'itchyny/lightline.vim'
 Plug 'ervandew/supertab'
-Plug 'vim-syntastic/syntastic'
 Plug 'vim-scripts/taglist.vim'
 Plug 'jwalton512/vim-blade'
 Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'posva/vim-vue'
 Plug 'flazz/vim-colorschemes'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'branch': 'release/1.x',
+  \ 'for': [
+    \ 'javascript',
+    \ 'typescript',
+    \ 'css',
+    \ 'less',
+    \ 'scss',
+    \ 'json',
+    \ 'graphql',
+    \ 'markdown',
+    \ 'vue',
+    \ 'lua',
+    \ 'php',
+    \ 'python',
+    \ 'ruby',
+    \ 'html',
+    \ 'swift' ] }
+Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-commentary'
+Plug 'othree/yajs.vim'
+Plug 'mxw/vim-jsx'
+Plug 'dense-analysis/ale'
 
 " Add plugins to &runtimepath
 call plug#end()
 
-" Syntastic settings
-set statusline+=%#warningmsg#
-" TODO: error showing up
-"set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" colorscheme default
+" Color scheme https://github.com/junegunn/seoul256.vim
+let g:seoul256_background = 235
+colo seoul256
+set background=dark " other option: light
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list            = 1
-let g:syntastic_check_on_open            = 1
-let g:syntastic_check_on_wq              = 0
-
-let g:syntastic_make_checkers       = ['gnumake']
-let g:syntastic_python_checkers     = ['pylint', 'flake8']
-let g:syntastic_php_checkers        = ['php', 'phpcs', 'phpmd']
-let gLsyntastic_debug               = 1
-let g:syntastic_gitcommit_checkers  = ['language_check']
-let g:syntastic_svn_checkers        = ['language_check']
+" ale settings
+let g:ale_fix_on_save = 1
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_linters = {
+\   'python': ['flake8', 'pylint'],
+\   'javascript': ['eslint'],
+\   'vue': ['eslint']
+\}
+let g:ale_fixers = {
+\   'javascript': ['prettier', 'eslint'],
+\   'typescript': ['prettier', 'tslint'],
+\   'vue': ['eslint'],
+\   'scss': ['prettier'],
+\   'html': ['prettier'],
+\   'php': ['php_cs_fixer', 'trim_whitespace'],
+\   'reason': ['refmt']
+\}
+let g:ale_fix_on_save = 1
+nnoremap ]r :ALENextWrap<CR>     " move to the next ALE warning / error
+nnoremap [r :ALEPreviousWrap<CR> " move to the previous ALE warning / error
 
 " supertab settings
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabDefaultCompletionType = "context"
+
+" code prettier
+nmap <Leader>! <Plug>(Prettier)
+let g:prettier#autoformat = 0
 
 " Speed up auto-completion menu
 " @see http://stackoverflow.com/a/2460593/1935866
