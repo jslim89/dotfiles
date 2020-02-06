@@ -1,0 +1,27 @@
+" >>> Global Key Bindings {{{
+" Ref: https://ikenox.info/blog/getting-started-ideavim/
+
+let mapleader = ","
+
+imap jj <esc>
+
+" block the usage of arrow keys
+nnoremap <Left> :echo "Use h"<CR>
+nnoremap <Right> :echo "Use l"<CR>
+nnoremap <Up> :echo "Use k"<CR>
+nnoremap <Down> :echo "Use j"<CR>
+
+" Map <leader>-a to reformat code
+vnoremap <leader>a :action ReformatCode<CR>
+
+" Map <leader>-u to comment/uncomment
+vnoremap <leader>u :action CommentByLineComment<CR>
+
+" Map <leader>-f to Find text in the whole project
+nnoremap <leader>f :action FindInPath<CR>
+
+" Map <leader>-r to Rename a symbol 
+nnoremap <leader>r :action RenameElement<CR>
+
+" Map <leader>-i to Go to implementation
+nnoremap <leader>i :action GotoImplementation<CR>

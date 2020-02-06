@@ -67,3 +67,7 @@ repeat() {
         "$@"
     done
 }
+
+# init fzf
+# @see https://github.com/junegunn/fzf
+[ -f ~/.bash.d/fzf.bash ] && source ~/.bash.d/fzf.bash
