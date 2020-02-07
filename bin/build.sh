@@ -27,3 +27,7 @@ git config --global color.diff auto
 git config --global color.status auto
 git config --global diff.tool 'vimdiff'
 git config --global alias.ll 'log --oneline --decorate --graph --all'
+
+# Set bash to emacs key-binding
+# ref: https://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell-for-ubuntu-debian-suse-redhat-linux-etc/
+set -o emacs
