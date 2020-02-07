@@ -13,7 +13,7 @@ let g:pdv_cfg_Type = "mixed"
 let g:pdv_cfg_Package = ""
 let g:pdv_cfg_Version = "$Id$"
 let g:pdv_cfg_Author = "Jeong-Sheng, Lim <jslim89@gmail.com>"
-let g:pdv_cfg_Copyright = "Copyright (C) 2011-2012 Jeong-Sheng, Lim. All rights reserved."
+let g:pdv_cfg_Copyright = "Copyright (C) 2020 Jeong-Sheng, Lim. All rights reserved."
 let g:pdv_cfg_License = "GPL Version 3 {@link http://www.gnu.org/licenses/gpl.html}"
 let g:pdv_cfg_Uses = 1
 
