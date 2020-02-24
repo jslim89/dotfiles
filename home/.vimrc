@@ -27,12 +27,7 @@ syntax on
 
 " Tell terminal your console support 256 colors. Set before colorscheme.
 set t_Co=256
-colorscheme default
-set background=light
 
-
-" status with required setttings for vim-powerline
-" @see https://github.com/Lokaltog/vim-powerline
 set ruler
 set showcmd
 set nocompatible   " Disable vi-compatibility
@@ -40,7 +35,6 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 set number
 set showmode
-let g:Powerline_symbols = 'fancy'
 
 " prevent cursor stuck at top or bottom
 " @see https://news.ycombinator.com/item?id=9574469
@@ -52,7 +46,6 @@ set scrolloff=6
 " set smartcase
 
 " search
-set gdefault " /g search and replace globally by default
 set incsearch 
 set hlsearch
 nmap <silent> ,/ :nohlsearch<CR>
@@ -260,7 +253,6 @@ let g:ale_fixers = {
 \   'php': ['php_cs_fixer', 'trim_whitespace'],
 \   'reason': ['refmt']
 \}
-let g:ale_fix_on_save = 1
 nnoremap ]r :ALENextWrap<CR>     " move to the next ALE warning / error
 nnoremap [r :ALEPreviousWrap<CR> " move to the previous ALE warning / error
 
