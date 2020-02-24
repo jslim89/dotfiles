@@ -1,7 +1,14 @@
 #!/bin/bash
 
 # installation
-sudo apt-get install git exuberant-ctags xclip mercurial vim tmux screen ack-grep ruby bash-completion
+
+## install node/yarn
+sudo apt-get install nodejs
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install yarn
+
+sudo apt-get install git exuberant-ctags xclip mercurial vim tmux screen ack-grep ruby bash-completion yarn
 sudo gem install homesick
 `which homesick` clone https://github.com/jslim89/dotfiles.git
 cd ~/.homesick/repos/dotfiles
