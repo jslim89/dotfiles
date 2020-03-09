@@ -71,6 +71,9 @@ repeat() {
 # php composer global path
 export PATH=$PATH:~/.config/composer/vendor/bin
 
+# local bin
+export PATH=$PATH:~/.local/bin
+
 # init fzf
 # @see https://github.com/junegunn/fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

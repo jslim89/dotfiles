@@ -17,6 +17,8 @@ git submodule update --init --recursive
 `which homesick` symlink dotfiles
 cd ~
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # Create a symlink for .fonts
 echo "Symlink .fonts"
 if [ -d ~/.fonts ]; then

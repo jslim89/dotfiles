@@ -215,8 +215,9 @@ Plug 'prettier/vim-prettier', {
     \ 'ruby',
     \ 'html',
     \ 'swift' ] }
-Plug 'junegunn/seoul256.vim'
+" Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
@@ -230,9 +231,10 @@ call plug#end()
 
 " colorscheme default
 " Color scheme https://github.com/junegunn/seoul256.vim
-let g:seoul256_background = 235
-colo seoul256
-set background=dark " other option: light
+" colo seoul256
+" let g:seoul256_background = 235
+" set background=dark " other option: light
+colo nord
 
 " ale settings
 let g:ale_fix_on_save = 1
