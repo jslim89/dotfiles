@@ -25,6 +25,16 @@ if [ -d ~/.bash.d ]; then
   unset f
 fi
 
+# For those command/alias don't want to commit
+if [ -d ~/.bash.d/non-git ]; then
+  for f in ~/.bash.d/non-git/*.sh; do
+    if [ -r $f ]; then
+      source $f
+    fi
+  done
+  unset f
+fi
+
 export PATH=~/bin:$PATH
 export HISTCONTROL=ignoreboth
 export HISTSIZE=100000000000
