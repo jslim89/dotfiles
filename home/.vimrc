@@ -231,10 +231,10 @@ call plug#end()
 
 " colorscheme default
 " Color scheme https://github.com/junegunn/seoul256.vim
-" colo seoul256
-" let g:seoul256_background = 235
-" set background=dark " other option: light
-colo nord
+colo seoul256
+let g:seoul256_background = 235
+set background=dark " other option: light
+" colo nord
 
 " ale settings
 let g:ale_fix_on_save = 1
