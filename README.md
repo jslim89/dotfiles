@@ -1,21 +1,13 @@
 About
 -----
-A collection of configuration files for the typical console programs bash, vim,
-screen, tmux, and misc. 
-[Based on Kian Meng](https://github.com/kianmeng)
-
-Prerequisite
-============
-
-- [Rubygems](https://rubygems.org/) (refer [the guide](https://gorails.com/setup/ubuntu/16.04))
+A collection of configuration files to be used for server
 
 Install
 =======
-Please **BACKUP** your existing dotfiles before you clone the repo. The safest
-way is to create a fresh new user account to try it out.
+Please **BACKUP** your server's existing dotfiles before you clone the repo.
 
 Then paste the command below to your terminal and hit `<ENTER>`
 
 ```sh
-$ bash <(curl -s https://raw.githubusercontent.com/jslim89/dotfiles/ubuntu/bin/build.sh)
+$ bash <(curl -s https://raw.githubusercontent.com/jslim89/dotfiles/server-rpm/bin/build.sh)
 ```

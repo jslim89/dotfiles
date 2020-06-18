@@ -1,31 +1,19 @@
 #!/bin/bash
 
 # installation
+sudo yum install -y htop git tmux vim
 
-## install node/yarn
-sudo apt-get install nodejs
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt update && sudo apt install yarn
+git clone https://github.com/jslim89/dotfiles.git ~/.dotfiles
 
-sudo apt-get install git exuberant-ctags xclip mercurial vim tmux screen ack-grep ruby bash-completion yarn
-sudo gem install homesick
-`which homesick` clone https://github.com/jslim89/dotfiles.git
-cd ~/.homesick/repos/dotfiles
-git checkout ubuntu
-git submodule update --init --recursive
-`which homesick` symlink dotfiles
-cd ~
+BASEDIR=~/.dotfiles/home
+
+for f in $BASEDIR/.*; do
+    if [ -r $f ] && [[ $f != *home/. ]] && [[ $f != *home/.. ]]; then
+        ln -s $f ~/`basename $f`
+    fi
+done
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-# Create a symlink for .fonts
-echo "Symlink .fonts"
-if [ -d ~/.fonts ]; then
-    ln -s ~/.homesick/repos/dotfiles/home/.fonts/* ~/.fonts/
-else
-    ln -s ~/.homesick/repos/dotfiles/home/.fonts ~/
-fi
 
 # Git config
 echo "Updating Git config..."
