@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # installation
-sudo yum install -y htop git tmux vim
+sudo yum install -y htop git tmux vim ctags-etags
 
 git clone https://github.com/jslim89/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles/
+git checkout server-rpm
 
 BASEDIR=~/.dotfiles/home
 
@@ -17,7 +19,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Git config
 echo "Updating Git config..."
-curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o home/.bash.d/git-completion.sh
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ${BASEDIR}/.bash.d/git-completion.sh
 git config --global color.ui auto
 git config --global color.branch auto
 git config --global color.diff auto
