@@ -43,7 +43,7 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-PROMPT="[\[\e[34m\]\u@\h\[\e[0m\]][\[\e[32m\]\w\[\e[0m\]]\[\e[33m\]\$(parse_git_branch)\[\e[0m\]\n"
+PROMPT="[\[\e[34m\]\u@\h\[\e[0m\]][\[\e[32m\]\w\[\e[0m\]]\[\e[33m\]\$(parse_git_branch)\[\e[0m\] "
 # PROMPT="[\[\e[34m\]\u@lim.com\[\e[0m\]][\[\e[32m\]\w\[\e[0m\]]\n"
 if [ $(id -u) -eq 0 ]; then
     PS1="${PROMPT}# "
