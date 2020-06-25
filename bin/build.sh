@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # installation
-sudo yum install -y htop git tmux vim ctags-etags
+sudo apt install -y htop git tmux vim exuberant-ctags
 
 git clone https://github.com/jslim89/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles/
-git checkout server-rpm
+git checkout server-deb
 
 BASEDIR=~/.dotfiles/home
 
