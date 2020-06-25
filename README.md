@@ -58,6 +58,22 @@ $ git checkout ubuntu # temporary use ubuntu branch first
 $ git submodule update --init --recursive
 ```
 
+### Debian-based server
+
+For server use, keep the minimal settings
+
+```sh
+$ bash <(curl -s https://raw.githubusercontent.com/jslim89/dotfiles/server-deb/bin/build.sh)
+```
+
+### RPM-based server
+
+For server use, keep the minimal settings
+
+```sh
+$ bash <(curl -s https://raw.githubusercontent.com/jslim89/dotfiles/server-rpm/bin/build.sh)
+```
+
 ### Windows
 
 [Read the instruction here](https://github.com/jslim89/dotfiles/tree/windows)
