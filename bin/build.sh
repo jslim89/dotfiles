@@ -11,7 +11,17 @@ BASEDIR=~/.dotfiles/home
 
 for f in $BASEDIR/.*; do
     if [ -r $f ] && [[ $f != *home/. ]] && [[ $f != *home/.. ]]; then
-        ln -s $f ~/`basename $f`
+        dest=~/`basename $f`
+        if [ ! \( -e "${dest}" \)  ]; then
+            ln -s $f $dest
+        else
+            read -p "Override $dest? y/N: " should_override
+            if [[ $should_override == "y" || $should_override == "yes"  ]]; then
+                ln -sf $f $dest
+            else
+                echo "Skipped $dest"
+            fi
+        fi
     fi
 done
 
