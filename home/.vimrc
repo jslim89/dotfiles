@@ -143,12 +143,6 @@ nmap <leader>gt :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR
 nnoremap <leader>p :set invpaste paste?<CR>
 set pastetoggle=<leader>p
 
-" block the usage of arrow keys
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
-
 " List out all buffers
 " @see http://of-vim-and-vigor.blogspot.com/p/vim-vigor-comic.html
 nnoremap <leader>l :ls<CR>:b<space>
