@@ -198,33 +198,23 @@ Plug 'flazz/vim-colorschemes'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'branch': 'release/1.x',
-  \ 'for': [
-    \ 'javascript',
-    \ 'typescript',
-    \ 'css',
-    \ 'less',
-    \ 'scss',
-    \ 'json',
-    \ 'graphql',
-    \ 'markdown',
-    \ 'vue',
-    \ 'lua',
-    \ 'php',
-    \ 'python',
-    \ 'ruby',
-    \ 'html',
-    \ 'swift' ] }
-" Plug 'junegunn/seoul256.vim'
+  \ 'branch': 'release/1.x' }
+Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'arcticicestudio/nord-vim'
+Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/gv.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'othree/yajs.vim'
-Plug 'mxw/vim-jsx'
 Plug 'dense-analysis/ale'
+Plug 'vimwiki/vimwiki'
+
+if executable('npm')
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install' }
+endif
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -265,6 +255,10 @@ let g:SuperTabDefaultCompletionType = "context"
 " code prettier
 nmap <Leader>! <Plug>(Prettier)
 let g:prettier#autoformat = 0
+
+" vimwiki
+let g:vimwiki_list = [{ 'path': '~/.vimwiki/',
+    \ 'syntax':'markdown', 'ext': '.md' }]
 
 " Speed up auto-completion menu
 " @see http://stackoverflow.com/a/2460593/1935866
