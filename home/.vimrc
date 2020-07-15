@@ -125,18 +125,6 @@ nmap <leader>n :NERDTreeToggle<CR>
 " command-t
 nmap <Leader>d :CommandT<CR>
 
-" ctags
-" $ apt-get install exuberant-ctags
-"
-" the ; search for tags file from current directory till parent directory
-" resursively until it finds a tags file
-set autochdir
-set tags+=./tags;
-nmap <leader>t :TlistToggle<CR>
-nmap <leader>f <C-]>
-nmap <leader>g <C-T>
-nmap <leader>gt :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-
 " switch between paste and no paste mode fast and go into insert mode after
 " that
 " see http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
@@ -183,7 +171,6 @@ Plug 'tpope/vim-markdown'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'ervandew/supertab'
-Plug 'vim-scripts/taglist.vim'
 Plug 'jwalton512/vim-blade'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
@@ -192,32 +179,13 @@ Plug 'flazz/vim-colorschemes'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'branch': 'release/1.x',
-  \ 'for': [
-    \ 'javascript',
-    \ 'typescript',
-    \ 'css',
-    \ 'less',
-    \ 'scss',
-    \ 'json',
-    \ 'graphql',
-    \ 'markdown',
-    \ 'vue',
-    \ 'lua',
-    \ 'php',
-    \ 'python',
-    \ 'ruby',
-    \ 'html',
-    \ 'swift' ] }
-" Plug 'junegunn/seoul256.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'arcticicestudio/nord-vim'
+  \ 'branch': 'release/1.x' }
+Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'othree/yajs.vim'
-Plug 'mxw/vim-jsx'
 Plug 'dense-analysis/ale'
 
 " Add plugins to &runtimepath
@@ -228,7 +196,6 @@ call plug#end()
 colo seoul256
 let g:seoul256_background = 235
 set background=dark " other option: light
-" colo nord
 
 " ale settings
 let g:ale_fix_on_save = 1

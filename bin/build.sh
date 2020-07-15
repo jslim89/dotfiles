@@ -5,7 +5,7 @@ SUDO=''
 if (( $EUID != 0 )); then
     SUDO='sudo'
 fi
-$SUDO apt install -y htop git tmux vim exuberant-ctags
+$SUDO apt install -y htop git tmux vim
 
 git clone https://github.com/jslim89/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles/
