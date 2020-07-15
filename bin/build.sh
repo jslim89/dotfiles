@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # installation
-sudo yum install -y htop git tmux vim ctags-etags
+sudo yum install -y htop git tmux vim
 
 git clone https://github.com/jslim89/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles/
