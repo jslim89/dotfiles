@@ -20,6 +20,8 @@ git checkout macOS
 git submodule update --init --recursive
 cd ~
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # Originally MAC doesn't look for `~/.bashrc`, rather it recognize `~/.profile`. So there are 2 way to do that:
 mv ~/.bashrc ~/.profile
 source ~/.profile

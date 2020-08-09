@@ -63,6 +63,12 @@ set foldlevel=1
 " hides buffers and don't close them
 set hidden
 
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" zoom a vim pane, <leader> to rebalance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
 
 " set filename in Tmux tab
 " @see http://stackoverflow.com/a/29693196/1935866
@@ -230,6 +236,8 @@ Plug 'tpope/vim-commentary'
 Plug 'othree/yajs.vim'
 Plug 'mxw/vim-jsx'
 Plug 'dense-analysis/ale'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-runner'
 
 " Add plugins to &runtimepath
 call plug#end()

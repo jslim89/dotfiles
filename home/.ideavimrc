@@ -25,3 +25,10 @@ nnoremap <leader>r :action RenameElement<CR>
 
 " Map <leader>-i to Go to implementation
 nnoremap <leader>i :action GotoImplementation<CR>
+
+" Source the ideavimrc without restart the IDE
+nnoremap <leader>sv :source ~/.ideavimrc<CR>
+
+set commentary
+set multiple-cursors
+set surround
