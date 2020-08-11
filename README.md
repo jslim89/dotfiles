@@ -89,35 +89,51 @@ $ ln -s /path/to/your/program
 ## Usage
 
 ### Vim's Key Bindings
+
 | Shortcuts | Description                              |
 |-----------|------------------------------------------|
 | ,         | Leader key                               |
 | jj        | Exist from insert mode into normal mode. |
 | ,p        | Toggle between Paste and normal mode.    |
 | ,!        | Prettify the source code js/css related. |
+| C-j       | Move up to top window.                   |
+| C-k       | Move down to down window.                |
+| C-h       | Move to left window.                     |
+| C-l       | Move to right window.                    |
 
 ### Tmux's Key Bindings
-| Shortcuts  | Description                              |
-|------------|------------------------------------------|
-| `          | Prefix key (backtick)                    |
-| ``         | Type backtick in console.                |
-| Alt+j      | Switch to left tab.                      |
-| Alt+k      | Switch to right tab.                     |
-| `\         | Split window vertically.                 |
-| `-         | Split window horizontally.               |
-| `j         | Move up to top window.                   |
-| `k         | Move down to down window.                |
-| `h         | Move to left window.                     |
-| `l         | Move to right window.                    |
-| `/         | Split a new window and man page for cmd. |
-| `~         | Split a new window and run htop.         |
-| `r         | Reload your .tmux.conf config file.      |
-| Shift+PgUp | Show previous page.                      |
 
-To resize tmux pane, hit \` followed by `:resize-pane -L <size>`
-  
-- options `-L` for left, `-R` for right, `-U` for up, `-D` for down
 
-e.g. `:resize-pane -L 15`
+| Shortcuts  | Description                                           |
+|------------|-------------------------------------------------------|
+| `          | Prefix key (backtick)                                 |
+| ``         | Type backtick in console.                             |
+| Alt+j      | Switch to left tab.                                   |
+| Alt+k      | Switch to right tab.                                  |
+| C-j        | Move up to top window.                                |
+| C-k        | Move down to down window.                             |
+| C-h        | Move to left window.                                  |
+| C-l        | Move to right window.                                 |
+| `\         | Split window vertically.                              |
+| `-         | Split window horizontally.                            |
+| `c         | New window.                                           |
+| `b         | break current split into new window.                  |
+| `j         | Join other window to current window.                  |
+| `s         | Swap pane                                             |
+| `n         | New session                                           |
+| `K         | Kill current session                                  |
+| `[         | Enter scroll mode (use `v` to highlight, `y` to yank) |
+| `C-j       | Search sessions                                       |
+| `/         | Split a new window and man page for cmd.              |
+| `~         | Split a new window and run htop.                      |
+| `r         | Reload your .tmux.conf config file.                   |
+| S-Left     | Resize window left (2 steps)                          |
+| S-Right    | Resize window right (2 steps)                         |
+| S-Down     | Resize window down (1 steps)                          |
+| S-Up       | Resize window up (1 steps)                            |
+| C-Left     | Resize window left (10 steps)                         |
+| C-Right    | Resize window right (10 steps)                        |
+| C-Down     | Resize window down (5 steps)                          |
+| C-Up       | Resize window up (5 steps)                            |
 
-Ref [Resizing tmux panes](https://michaelsoolee.com/resize-tmux-panes/)
+Reference: https://thoughtbot.com/upcase/tmux
