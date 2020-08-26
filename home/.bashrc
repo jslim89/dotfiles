@@ -35,7 +35,7 @@ if [ -d ~/.bash.d/non-git ]; then
   unset f
 fi
 
-export PATH=~/bin:$PATH
+export PATH=~/bin:$PATH:~/.bash.d/utils
 export HISTCONTROL=ignoreboth
 export HISTSIZE=100000000000
 
