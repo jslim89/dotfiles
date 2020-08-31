@@ -246,10 +246,10 @@ call plug#end()
 set t_Co=256
 " colorscheme default
 " Color scheme https://github.com/junegunn/seoul256.vim
-" colo seoul256
-" let g:seoul256_background = 235
-" set background=dark " other option: light
-colo nord
+colo seoul256
+let g:seoul256_background = 235
+set background=dark " other option: light
+" colo nord
 
 " Syntastic settings
 set statusline+=%#warningmsg#
