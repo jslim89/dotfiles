@@ -173,6 +173,10 @@ map <F3> :source ~/.vim/session <CR>
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" Remove all trailing spaces
+" @see https://vim.fandom.com/wiki/Remove_unwanted_spaces
+nnoremap <Leader>rs :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 " }}}
 
 " >>> Plugins {{{
@@ -217,6 +221,7 @@ Plug 'tpope/vim-commentary'
 Plug 'othree/yajs.vim'
 Plug 'dense-analysis/ale'
 Plug 'vimwiki/vimwiki'
+Plug 'hashivim/vim-terraform'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 
