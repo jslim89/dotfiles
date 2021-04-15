@@ -120,7 +120,9 @@ $ ln -s /path/to/your/program
 | `b         | break current split into new window.                  |
 | `j         | Join other window to current window.                  |
 | `s         | Swap pane                                             |
+| `x         | Kill current pane.                                    |
 | `n         | New session                                           |
+| `d         | Detech current session                                |
 | `K         | Kill current session                                  |
 | `[         | Enter scroll mode (use `v` to highlight, `y` to yank) |
 | `C-j       | Search sessions                                       |
