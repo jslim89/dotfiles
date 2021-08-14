@@ -16,6 +16,10 @@
 # 1. create a new filename in ~/.bash.d/name_of_the_category.sh 
 # 2. add your own aliases or functions and save the file
 # 3. reload bash by typing source .bashrc
+
+# suppress zsh warning
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 if [ -d ~/.bash.d ]; then
   for f in ~/.bash.d/*.sh; do
     if [ -r $f ]; then
