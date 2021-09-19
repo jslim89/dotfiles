@@ -238,6 +238,8 @@ Plug 'mxw/vim-jsx'
 Plug 'dense-analysis/ale'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
+Plug 'reedes/vim-pencil'
+Plug 'junegunn/goyo.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -305,6 +307,40 @@ augroup END
 
 " }}}
 
+" >>> Writer-tools config {{{
+" Plugin vim-pencil
+augroup pencil
+  autocmd!
+  autocmd FileType markdown call pencil#init({'wrap': 'hard', 'textwidth': 80})
+  autocmd FileType text     call pencil#init({'wrap': 'hard', 'textwidth': 80})
+augroup END
+
+" Plugin goyo.vim
+function! s:goyo_enter()
+  if executable('tmux') && strlen($TMUX)
+    silent !tmux set status off
+    silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  endif
+  set noshowmode
+  set noshowcmd
+  set scrolloff=999
+  Limelight
+endfunction
+
+function! s:goyo_leave()
+  if executable('tmux') && strlen($TMUX)
+    silent !tmux set status on
+    silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  endif
+  set showmode
+  set showcmd
+  set scrolloff=5
+  Limelight!
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+" }}}
 
 " highlight those characters that are over the length of 80 chars 
 " http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns 
