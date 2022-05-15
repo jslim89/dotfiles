@@ -240,6 +240,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'reedes/vim-pencil'
 Plug 'junegunn/goyo.vim'
+Plug 'TovarishFin/vim-solidity'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -311,8 +312,8 @@ augroup END
 " Plugin vim-pencil
 augroup pencil
   autocmd!
-  autocmd FileType markdown call pencil#init({'wrap': 'hard', 'textwidth': 80})
-  autocmd FileType text     call pencil#init({'wrap': 'hard', 'textwidth': 80})
+  autocmd FileType markdown call pencil#init({'wrap': 'soft', 'textwidth': 80})
+  autocmd FileType text     call pencil#init({'wrap': 'soft', 'textwidth': 80})
 augroup END
 
 " Plugin goyo.vim
