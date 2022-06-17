@@ -6,10 +6,14 @@ let mapleader = ","
 imap jj <esc>
 
 " block the usage of arrow keys
-nnoremap <Left> :echo "Use h"<CR>
-nnoremap <Right> :echo "Use l"<CR>
-nnoremap <Up> :echo "Use k"<CR>
-nnoremap <Down> :echo "Use j"<CR>
+"nnoremap <Left> :echo "Use h"<CR>
+"nnoremap <Right> :echo "Use l"<CR>
+"nnoremap <Up> :echo "Use k"<CR>
+"nnoremap <Down> :echo "Use j"<CR>
+"inoremap <Left> <nop>
+"inoremap <Right> <nop>
+"inoremap <Up> <nop>
+"inoremap <Down> <nop>
 
 " Map <leader>-a to reformat code
 vnoremap <leader>a :action ReformatCode<CR>
@@ -28,6 +32,8 @@ nnoremap <leader>i :action GotoImplementation<CR>
 
 " Source the ideavimrc without restart the IDE
 nnoremap <leader>sv :source ~/.ideavimrc<CR>
+
+" vnoremap ' :execute "normal! <esc>`<i'<esc>`>la'<esc>"
 
 set commentary
 set multiple-cursors

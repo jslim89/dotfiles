@@ -227,6 +227,9 @@ Plug 'vimwiki/vimwiki'
 Plug 'hashivim/vim-terraform'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'kristijanhusak/vim-dadbod-completion'
 
 if executable('npm')
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install' }
