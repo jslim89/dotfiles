@@ -35,6 +35,9 @@ nnoremap <leader>sv :source ~/.ideavimrc<CR>
 
 " vnoremap ' :execute "normal! <esc>`<i'<esc>`>la'<esc>"
 
+" Remove all trailing spaces
+nnoremap <Leader>rs :%s/\s\+$//e<CR>
+
 set commentary
 set multiple-cursors
 set surround

@@ -116,7 +116,6 @@ nnoremap    <Leader>/ :nohlsearch<cr>   " clear current search
 
 nmap        <Leader>e :CtrlP<cr>
 nmap        <Leader>ee :MRU<cr>
-nmap        <Leader>b :Ack<space>
 
 nmap        <Leader>ga <Plug>GitGutterStageHunk
 nmap        <leader>gj <Plug>GitGutterNextHunk
@@ -127,9 +126,17 @@ nmap        <Leader>gv <Plug>GitGutterPreviewHunk
 " nerdtree
 " @see https://github.com/scrooloose/nerdtree
 nmap <leader>n :NERDTreeToggle<CR>
+let NERDTreeHijackNetrw=0
 
 " command-t
 nmap <Leader>d :CommandT<CR>
+
+" fzf.vim
+nnoremap <C-p> :Files<CR>
+
+" ack.vim (use https://github.com/ggreer/the_silver_searcher)
+nmap <Leader>b :Ack<space>
+let g:ackprg = 'ag --vimgrep'
 
 " ctags
 " $ apt-get install exuberant-ctags
@@ -199,6 +206,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mileszs/ack.vim'
 Plug 'wincent/command-t'
 Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-vinegar'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'ervandew/supertab'
@@ -227,6 +235,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'hashivim/vim-terraform'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'kristijanhusak/vim-dadbod-completion'
