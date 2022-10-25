@@ -83,14 +83,24 @@ repeat() {
     done
 }
 
-# git bash auto completion https://git-scm.com/book/en/v1/Git-Basics-Tips-and-Tricks#Auto-Completion
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion || {
-    # if not found in /usr/local/etc, try the brew --prefix location
-    [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ] && \
-        . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
-}
-
 export PATH=$PATH:~/.composer/vendor/bin
+export PATH=$PATH:/opt/homebrew/bin
+export PATH=$PATH:/opt/homebrew/opt/mysql-client/bin
+
+# auto completion https://docs.brew.sh/Shell-Completion
+if type brew &>/dev/null
+then
+  HOMEBREW_PREFIX="$(brew --prefix)"
+  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]
+  then
+    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+  else
+    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*
+    do
+      [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+    done
+  fi
+fi
 
 # init fzf
 # @see https://github.com/junegunn/fzf

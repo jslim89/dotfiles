@@ -135,6 +135,7 @@ nmap <Leader>d :CommandT<CR>
 " fzf
 " @see https://github.com/junegunn/fzf.vim
 nmap <Leader>F :FZF<CR>
+nnoremap <C-p> :Files<CR>
 
 " ctags
 " $ apt-get install exuberant-ctags
@@ -197,6 +198,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mileszs/ack.vim'
 Plug 'wincent/command-t'
 Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'kristijanhusak/vim-dadbod-completion'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'ervandew/supertab'
