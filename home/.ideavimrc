@@ -29,6 +29,9 @@ nnoremap <leader>i :action GotoImplementation<CR>
 " Source the ideavimrc without restart the IDE
 nnoremap <leader>sv :source ~/.ideavimrc<CR>
 
+" Remove all trailing spaces
+nnoremap <Leader>rs :%s/\s\+$//e<CR>
+
 set commentary
 set multiple-cursors
 set surround

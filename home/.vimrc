@@ -128,6 +128,7 @@ nmap        <Leader>gv <Plug>GitGutterPreviewHunk
 " nerdtree
 " @see https://github.com/scrooloose/nerdtree
 nmap <leader>n :NERDTreeToggle<CR>
+let NERDTreeHijackNetrw=0
 
 " command-t
 nmap <Leader>d :CommandT<CR>
@@ -181,6 +182,10 @@ map <F3> :source ~/.vim/session <CR>
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " }}}
 
+" Remove all trailing spaces
+" @see https://vim.fandom.com/wiki/Remove_unwanted_spaces
+nnoremap <Leader>rs :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+
 " >>> Plugins {{{
 
 " Automatic vim-plug installation
@@ -211,26 +216,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'posva/vim-vue'
 Plug 'flazz/vim-colorschemes'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'branch': 'release/1.x',
-  \ 'for': [
-    \ 'javascript',
-    \ 'typescript',
-    \ 'css',
-    \ 'less',
-    \ 'scss',
-    \ 'json',
-    \ 'graphql',
-    \ 'markdown',
-    \ 'vue',
-    \ 'lua',
-    \ 'php',
-    \ 'python',
-    \ 'ruby',
-    \ 'html',
-    \ 'swift' ] }
-" Plug 'junegunn/seoul256.vim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

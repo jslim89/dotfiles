@@ -86,6 +86,7 @@ repeat() {
 export PATH=$PATH:~/.composer/vendor/bin
 export PATH=$PATH:/opt/homebrew/bin
 export PATH=$PATH:/opt/homebrew/opt/mysql-client/bin
+export PATH=$PATH:$HOME/Library/Python/3.9/bin
 
 # auto completion https://docs.brew.sh/Shell-Completion
 if type brew &>/dev/null
