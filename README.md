@@ -20,7 +20,7 @@ $ sudo apt-get install curl
 $ bash <(curl -s https://raw.githubusercontent.com/jslim89/dotfiles/ubuntu/bin/build.sh)
 ```
 
-### Mac OS X
+### macOS
 
 You must have [Homebrew](http://brew.sh/) installed.
 
@@ -28,7 +28,7 @@ Paste the command below to your terminal, and hit `<ENTER>`
 
 ```sh
 $ eval "$(/opt/homebrew/bin/brew shellenv)"
-$ bash <(curl -s https://raw.githubusercontent.com/jslim89/dotfiles/macOS/bin/build.sh)
+$ bash <(curl -s https://raw.githubusercontent.com/jslim89/dotfiles/macOS-zsh/bin/build.sh)
 ```
 
 ### Debian
