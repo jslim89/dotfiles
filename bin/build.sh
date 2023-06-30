@@ -22,8 +22,12 @@ cd ~
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-# change back to dotfiles
-cd ~/.homesick/repos/dotfiles
+# setup auto completion
+ln -s ~/.zsh.d/pass.zsh-completion $(brew --prefix)/share/zsh-completions/_pass
+
+# fix "zsh compinit: insecure directories"
+chmod -R go-w "$(brew --prefix)/share"
+
 source ~/.zshrc
 
 # Git config
