@@ -54,6 +54,9 @@ if type brew &>/dev/null; then
 
   autoload -Uz compinit
   compinit
+
+  export PATH=$PATH:/opt/homebrew/bin
+  export PATH=$PATH:/opt/homebrew/opt/mysql-client/bin
 fi
 
 # init fzf
