@@ -37,14 +37,15 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-NEWLINE=$'\n'
-PROMPT="[%F{blue}%n@%m%f][%F{green}%~%f]%F{yellow}$(parse_git_branch)%f${NEWLINE}"
-
-if [ $(id -u) -eq 0 ]; then
-    PS1="${PROMPT}# "
-else
-    PS1="${PROMPT}$ "
-fi
+precmd() {
+    local NEWLINE=$'\n'
+    PROMPT="[%F{blue}%n@%m%f][%F{green}%~%f]%F{yellow}$(parse_git_branch)%f${NEWLINE}"
+    if [ $(id -u) -eq 0 ]; then
+        PS1="${PROMPT}# "
+    else
+        PS1="${PROMPT}$ "
+    fi
+}
 
 export EDITOR=vim
 
