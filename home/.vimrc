@@ -232,6 +232,7 @@ Plug 'christoomey/vim-tmux-runner'
 Plug 'reedes/vim-pencil'
 Plug 'junegunn/goyo.vim'
 Plug 'TovarishFin/vim-solidity'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Add plugins to &runtimepath
 call plug#end()
