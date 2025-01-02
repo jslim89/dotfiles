@@ -57,7 +57,7 @@ if type brew &>/dev/null; then
   compinit
 
   export PATH=$PATH:/opt/homebrew/bin
-  export PATH=$PATH:/opt/homebrew/opt/mysql-client/bin
+  export PATH=$PATH:/opt/homebrew/opt/mysql-client@8.4/bin
 fi
 
 # init fzf
@@ -66,3 +66,6 @@ fi
 
 export LC_ALL=en_US.UTF-8
 
+alias epub2tts='docker run -e COQUI_TOS_AGREED=1 -v "$PWD:$PWD" -v ~/.local/share/tts:/root/.local/share/tts -w "$PWD" ghcr.io/aedocw/epub2tts:release'
+
+eval "$(atuin init zsh)"

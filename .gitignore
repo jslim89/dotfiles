@@ -13,4 +13,5 @@
 /home/.vim/autoload/plug.vim
 /home/.vim/plugged/
 /home/.bash.d/git-completion.sh
+/home/.zsh.d/secret.zsh
 .DS_Store
