@@ -1,5 +1,7 @@
 #!/bin/bash
 
+alias brew=/opt/homebrew/bin/brew
+
 # installation
 if ! type brew >/dev/null; then
     echo "Please install home brew before execute this script..."
@@ -11,7 +13,15 @@ if ! type git >/dev/null; then
     exit -1
 fi
 
-brew install coreutils zsh-completion tmux git-delta bat homeshick atuin
+brew install zsh-completion \
+  atuin \
+  bat \
+  coreutils \
+  git-delta \
+  homeshick \
+  tmux \
+  zoxide
+brew install --cask ghostty
 
 homeshick clone https://github.com/jslim89/dotfiles.git
 cd ~/.homesick/repos/dotfiles

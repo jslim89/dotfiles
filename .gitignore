@@ -14,4 +14,5 @@
 /home/.vim/plugged/
 /home/.bash.d/git-completion.sh
 /home/.zsh.d/secret.zsh
+/home/.zsh.d/*.ignored.zsh
 .DS_Store

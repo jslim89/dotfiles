@@ -108,3 +108,4 @@ fi
 [ -f ~/.bash.d/fzf.bash ] && source ~/.bash.d/fzf.bash
 
 export LC_ALL=en_US.UTF-8
+

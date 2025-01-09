@@ -47,25 +47,21 @@ precmd() {
     fi
 }
 
-export EDITOR=vim
+export EDITOR=nvim
+export LC_ALL=en_US.UTF-8
 
-# auto completion https://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line/392382#392382
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+# homebrew auto completion https://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line/392382#392382
+if type /opt/homebrew/bin/brew &>/dev/null; then
+  FPATH=$(/opt/homebrew/bin/brew --prefix)/share/zsh-completions:$FPATH
 
   autoload -Uz compinit
   compinit
 
   export PATH=$PATH:/opt/homebrew/bin
+
+  # mysql client
   export PATH=$PATH:/opt/homebrew/opt/mysql-client@8.4/bin
+  # postgres client
+  export PATH=$PATH:/opt/homebrew/opt/libpq/bin
 fi
 
-# init fzf
-# @see https://github.com/junegunn/fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export LC_ALL=en_US.UTF-8
-
-alias epub2tts='docker run -e COQUI_TOS_AGREED=1 -v "$PWD:$PWD" -v ~/.local/share/tts:/root/.local/share/tts -w "$PWD" ghcr.io/aedocw/epub2tts:release'
-
-eval "$(atuin init zsh)"
