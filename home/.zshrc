@@ -1,6 +1,12 @@
 # use emacs key-binding
 bindkey -e
 
+# Use bash-like word definitions for navigation and operations.
+# Eg. Alt+<Left> or <Backspace>+<Left> will not jump over / or -
+# https://unix.stackexchange.com/questions/258656/how-can-i-have-two-keystrokes-to-delete-to-either-a-slash-or-a-word-in-zsh/258661#258661
+autoload -Uz select-word-style
+select-word-style bash
+
 # for tmux: export 256color
 # @see https://wiki.archlinux.org/index.php/Tmux#Setting_the_correct_term
 # [ -n "$TMUX" ] && export TERM=screen-256color
