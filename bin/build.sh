@@ -20,6 +20,7 @@ brew install zsh-completion \
   git-delta \
   homeshick \
   tmux \
+  glow \
   zoxide
 brew install --cask ghostty
 
