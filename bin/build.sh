@@ -18,7 +18,9 @@ brew install zsh-completion \
   bat \
   coreutils \
   git-delta \
+  git-standup \
   homeshick \
+  sqruff \
   tmux \
   glow \
   zoxide
