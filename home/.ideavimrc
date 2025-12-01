@@ -35,3 +35,5 @@ nnoremap <Leader>rs :%s/\s\+$//e<CR>
 set commentary
 set multiple-cursors
 set surround
+set clipboard+=unnamed
+
