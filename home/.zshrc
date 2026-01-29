@@ -35,7 +35,8 @@ if [ -d ~/.zsh.d ]; then
   unset f
 fi
 
-export PATH=~/bin:$PATH:~/.zsh.d/utils
+export PATH=~/bin:~/.local/bin:$PATH:~/.zsh.d/utils
+
 export HISTCONTROL=ignoreboth
 export HISTSIZE=100000000000
 
