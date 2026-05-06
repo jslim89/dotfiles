@@ -1,32 +1,39 @@
 [core]
-	# brew install git-delta
-	pager = delta
+  # brew install git-delta
+  pager = delta
 
 [user]
-	name = Js Lim
-	email = jslim89@gmail.com
+  name = Js Lim
+  email = jslim89@gmail.com
 
 [color]
-	ui = auto
-	branch = auto
-	diff = auto
-	status = auto
+  ui = auto
+  branch = auto
+  diff = auto
+  status = auto
 
 [diff]
     colorMoved = default
 
 [alias]
-	ll = log --oneline --decorate --graph --all
+  ll = log --oneline --decorate --graph --all
 
 [interactive]
-	diffFilter = delta --color-only
+  diffFilter = delta --color-only
 
 [delta]
-	navigate = true    # use n and N to move between diff sections
-    #light = true      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
-	side-by-side = true
-	line-numbers = true
+  features = seoul256
+  navigate = true    # use n and N to move between diff sections
+  side-by-side = true
+  line-numbers = true
+
+[delta "seoul256"]
+  dark = true
+  syntax-theme = seoul256
+  minus-style = "#d75f5f" "#3a2121"
+  plus-style = "#afdf87" "#263526"
+  line-numbers-zero-style = "#626262" "#262626"
 
 [merge]
-	conflictstyle = diff3
+  conflictstyle = diff3
 

@@ -51,3 +51,7 @@ git config --global color.diff auto
 git config --global color.status auto
 git config --global diff.tool 'vimdiff'
 git config --global alias.ll 'log --oneline --decorate --graph --all'
+
+# bat
+bat cache --build # rebuild the cache
+
