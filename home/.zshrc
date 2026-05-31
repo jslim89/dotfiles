@@ -44,9 +44,15 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
+py_virtualenv_info() {
+  if [[ -n "$VIRTUAL_ENV" ]]; then
+    echo "\n(python: ${VIRTUAL_ENV/#$HOME/~})"
+  fi
+}
+
 precmd() {
     local NEWLINE=$'\n'
-    PROMPT="[%F{blue}%n@%m%f][%F{green}%~%f]%F{yellow}$(parse_git_branch)%f${NEWLINE}"
+    PROMPT="[%F{blue}%n@%m%f][%F{green}%~%f]%F{yellow}$(parse_git_branch)%f%F{magenta}$(py_virtualenv_info)%f${NEWLINE}"
     if [ $(id -u) -eq 0 ]; then
         PS1="${PROMPT}# "
     else
