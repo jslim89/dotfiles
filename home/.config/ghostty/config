@@ -1,4 +1,83 @@
+# ==============================================================================
+# Ghostty Full Configuration (Ported from .tmux.conf)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Base Behaviors & Directory Inheritance
+# ------------------------------------------------------------------------------
+# Mimics: bind-key | split-window -h -c '#{pane_current_path}'
+window-inherit-working-directory = true
+
+
+# ------------------------------------------------------------------------------
+# 2. Window/Tab Management (Leader Key Mode via Native Sequences)
+# ------------------------------------------------------------------------------
+# Type ` then c to open a tab, and you can immediately type c normally again!
+
+# ` + c = New tab (Mimics: bind c new-window)
+keybind = backquote>c=new_tab
+
+# ` + - = Horizontal split (Mimics: bind-key - split-window -v)
+keybind = backquote>-=new_split:down
+
+# ` + | = Vertical split (Mimics: bind-key | split-window -h)
+keybind = backquote>|=new_split:right
+
+# ` + \ = Vertical split fallback (Mimics: bind-key \\ split-window -h)
+keybind = backquote>\=new_split:right
+
+# ` + ` = Escape hatch to type a literal backtick inside terminal prompts
+keybind = backquote>backquote=text:`
+
+# ` + r = Reload configuration (Mimics: bind-key r source-file)
+keybind = backquote>r=reload_config
+
+
+# ------------------------------------------------------------------------------
+# 3. Tab Navigation (No Leader Key)
+# ------------------------------------------------------------------------------
+# Alt + j = Previous tab (Mimics: bind-key -n M-j prev)
+# Alt + k = Next tab     (Mimics: bind-key -n M-k next)
+keybind = alt+j=previous_tab
+keybind = alt+k=next_tab
+
+
+# ------------------------------------------------------------------------------
+# 4. Split Pane Navigation (No Leader Key)
+# ------------------------------------------------------------------------------
+# Ctrl + h/j/k/l to switch between panels
+#keybind = ctrl+h=goto_split:left
+#keybind = ctrl+j=goto_split:bottom
+#keybind = ctrl+k=goto_split:top
+#keybind = ctrl+l=goto_split:right
+
+keybind = performable:ctrl+h=goto_split:left
+keybind = performable:ctrl+j=goto_split:down
+keybind = performable:ctrl+k=goto_split:up
+keybind = performable:ctrl+l=goto_split:right
+
+# ------------------------------------------------------------------------------
+# 5. Pane Resizing Shortcuts (No Leader Key)
+# ------------------------------------------------------------------------------
+# Shift + Arrow Keys (Fine tuning: 1-2 steps)
+keybind = shift+arrow_left=resize_split:left,10
+keybind = shift+arrow_right=resize_split:right,10
+keybind = shift+arrow_down=resize_split:down,10
+keybind = shift+arrow_up=resize_split:up,10
+
+# Ctrl + Arrow Keys (Coarse tuning: larger steps)
+keybind = ctrl+arrow_left=resize_split:left,40
+keybind = ctrl+arrow_right=resize_split:right,40
+keybind = ctrl+arrow_down=resize_split:down,40
+keybind = ctrl+arrow_up=resize_split:up,40
+
+
+# ------------------------------------------------------------------------------
+# 6. Environmental Variations & Theme
+# ------------------------------------------------------------------------------
 font-size = 15
+font-family = "JetBrains Mono"
+
 macos-option-as-alt = true
 theme = seoul256.conf
 background-opacity = 1.0
