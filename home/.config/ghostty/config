@@ -10,51 +10,45 @@ window-inherit-working-directory = true
 
 
 # ------------------------------------------------------------------------------
-# 2. Window/Tab Management (Leader Key Mode via Native Sequences)
+# 2. TMUX PASSTHROUGH OVERRIDES (CRITICAL PLACEMENT)
 # ------------------------------------------------------------------------------
-# Type ` then c to open a tab, and you can immediately type c normally again!
-
-# ` + c = New tab (Mimics: bind c new-window)
-keybind = backquote>c=new_tab
-
-# ` + - = Horizontal split (Mimics: bind-key - split-window -v)
-keybind = backquote>-=new_split:down
-
-# ` + | = Vertical split (Mimics: bind-key | split-window -h)
-keybind = backquote>|=new_split:right
-
-# ` + \ = Vertical split fallback (Mimics: bind-key \\ split-window -h)
-keybind = backquote>\=new_split:right
-
-# ` + ` = Escape hatch to type a literal backtick inside terminal prompts
-keybind = backquote>backquote=text:`
-
-# ` + r = Reload configuration (Mimics: bind-key r source-file)
-keybind = backquote>r=reload_config
+# We declare these FIRST so Ghostty knows to pass standalone backticks and alt keys
+# straight through to Tmux, leaving them unblocked for your yank/copy-mode.
+keybind = backquote=unbind
+keybind = alt+j=unbind
+keybind = alt+k=unbind
 
 
 # ------------------------------------------------------------------------------
-# 3. Tab Navigation (No Leader Key)
+# 3. Window/Tab Management (Ghostty Layers via Alt+Backquote Modifier)
 # ------------------------------------------------------------------------------
-# Alt + j = Previous tab (Mimics: bind-key -n M-j prev)
-# Alt + k = Next tab     (Mimics: bind-key -n M-k next)
-keybind = alt+j=previous_tab
-keybind = alt+k=next_tab
+# Use Alt + Backtick (`) followed by a key to manage native Ghostty interfaces.
+
+# Alt+` + c = New tab (Mimics: bind c new-window)
+keybind = alt+backquote>c=new_tab
+
+# Alt+` + - = Horizontal split (Mimics: bind-key - split-window -v)
+keybind = alt+backquote>-=new_split:down
+
+# Alt+` + | = Vertical split (Mimics: bind-key | split-window -h)
+keybind = alt+backquote>|=new_split:right
+
+# Alt+` + \ = Vertical split fallback (Mimics: bind-key \\ split-window -h)
+keybind = alt+backquote>\=new_split:right
+
+# Alt+` + r = Reload configuration (Mimics: bind-key r source-file)
+keybind = alt+backquote>r=reload_config
 
 
 # ------------------------------------------------------------------------------
 # 4. Split Pane Navigation (No Leader Key)
 # ------------------------------------------------------------------------------
-# Ctrl + h/j/k/l to switch between panels
-#keybind = ctrl+h=goto_split:left
-#keybind = ctrl+j=goto_split:bottom
-#keybind = ctrl+k=goto_split:top
-#keybind = ctrl+l=goto_split:right
-
+# Smart Pass-Through: If a Ghostty split exists, it moves. If not, it moves inside Neovim.
 keybind = performable:ctrl+h=goto_split:left
 keybind = performable:ctrl+j=goto_split:down
 keybind = performable:ctrl+k=goto_split:up
 keybind = performable:ctrl+l=goto_split:right
+
 
 # ------------------------------------------------------------------------------
 # 5. Pane Resizing Shortcuts (No Leader Key)
